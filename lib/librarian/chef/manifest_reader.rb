@@ -3,6 +3,8 @@ require 'yaml'
 
 require 'librarian/manifest'
 
+require_relative 'metadata'
+
 module Librarian
   module Chef
     module ManifestReader
@@ -23,13 +25,8 @@ module Librarian
       end
 
       def compile_manifest(name, path)
-        # Inefficient, if there are many cookbooks with uncompiled metadata.
-        require 'chef/json_compat'
-        require 'chef/cookbook/metadata'
-        md = ::Chef::Cookbook::Metadata.new
-        md.name(name)
-        md.from_file(path.join('metadata.rb').to_s)
-        {"name" => md.name, "version" => md.version, "dependencies" => md.dependencies}
+        md = Metadata.new(path.join('metadata.rb').to_s)
+        { "name" => name, "version" => md.version, "dependencies" => md.dependencies }
       end
 
       def manifest?(name, path)
