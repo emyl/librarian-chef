@@ -1,4 +1,14 @@
-Librarian-Chef [![Build Status](https://secure.travis-ci.org/applicationsonline/librarian-chef.png)](http://travis-ci.org/applicationsonline/librarian-chef) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/applicationsonline/librarian-chef)
+# Librarian-Chef-Nochef
+
+A fork of the [librarian-chef](https://github.com/applicationsonline/librarian-chef)
+gem that doesn't depend on chef.
+
+Install running:
+
+    $ gem install librarian-chef-nochef
+
+Below the original librarian-chef README:
+
 =========
 
 Librarian-Chef is a bundler for your Chef-based infrastructure repositories.

@@ -1,16 +1,15 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'librarian/chef/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "librarian-chef"
-  gem.version       = Librarian::Chef::VERSION
-  gem.authors       = ["Jay Feldblum"]
-  gem.email         = ["y_feldblum@yahoo.com"]
-  gem.summary       = %q{A Bundler for your Chef Cookbooks.}
-  gem.description   = %q{A Bundler for your Chef Cookbooks.}
-  gem.homepage      = ""
+  gem.name          = "librarian-chef-nochef"
+  gem.version       = "0.1.0"
+  gem.authors       = ["Emiliano Ticci", "Jay Feldblum"]
+  gem.email         = ["emiticci@gmail.com", "y_feldblum@yahoo.com"]
+  gem.summary       = %q{A Bundler for your Chef Cookbooks that does not depends on chef.}
+  gem.description   = %q{A Bundler for your Chef Cookbooks that does not depends on chef.}
+  gem.homepage      = "https://github.com/emyl/librarian-chef-nochef"
   gem.license       = "MIT"
 
   gem.files         = `git ls-files`.split($/)
