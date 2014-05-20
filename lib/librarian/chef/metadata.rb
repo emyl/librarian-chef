@@ -9,10 +9,12 @@ module Librarian
 
       attr_reader :dependencies
 
-      def initialize(file_name)
+      def initialize(file_name, path)
         @dependencies = {}
         @version      = "0.0.0"
-        self.instance_eval File.read(file_name)
+        Dir.chdir(path) do
+          self.instance_eval File.read(file_name)
+        end
       end
 
       def depends(cookbook, version_constraint = nil)

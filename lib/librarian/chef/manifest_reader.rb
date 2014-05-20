@@ -25,7 +25,7 @@ module Librarian
       end
 
       def compile_manifest(name, path)
-        md = Metadata.new(path.join('metadata.rb').to_s)
+        md = Metadata.new('metadata.rb', path)
         { "name" => name, "version" => md.version, "dependencies" => md.dependencies }
       end
 
