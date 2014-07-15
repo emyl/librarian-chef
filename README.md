@@ -52,7 +52,7 @@ depends will go here.
 
 Here's an example `Cheffile`:
 
-    site "http://community.opscode.com/api/v1"
+    site "https://supermarket.getchef.com/api/v1"
 
     cookbook "ntp"
     cookbook "timezone", "0.0.1"
@@ -68,7 +68,7 @@ Here's how it works:
 
 We start off by declaring the *default source* for this `Cheffile`.
 
-    site "http://community.opscode.com/api/v1"
+    site "https://supermarket.getchef.com/api/v1"
 
 This default source in this example is the Opscode Community Site API. This is
 most likely what you will want for your default source. However, you can
@@ -171,7 +171,7 @@ default source.
 Add dependencies and their sources to the `Cheffile`:
 
     $ cat Cheffile
-        site 'http://community.opscode.com/api/v1'
+        site 'https://supermarket.getchef.com/api/v1'
         cookbook 'ntp'
         cookbook 'timezone', '0.0.1'
         cookbook 'rvm',
@@ -221,7 +221,7 @@ Inspect the details of specific resolved dependencies with:
 Update your `Cheffile` with new/changed/removed constraints/sources/dependencies:
 
     $ cat Cheffile
-        site 'http://community.opscode.com/api/v1'
+        site 'https://supermarket.getchef.com/api/v1'
         cookbook 'ntp'
         cookbook 'timezone', '0.0.1'
         cookbook 'rvm',
