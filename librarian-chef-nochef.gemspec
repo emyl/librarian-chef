@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name          = "librarian-chef-nochef"
-  gem.version       = "0.1.2"
+  gem.version       = "0.2.0"
   gem.authors       = ["Emiliano Ticci", "Jay Feldblum"]
   gem.email         = ["emiticci@gmail.com", "y_feldblum@yahoo.com"]
   gem.summary       = %q{A Bundler for your Chef Cookbooks that does not depends on chef.}
